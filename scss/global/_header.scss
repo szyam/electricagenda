@@ -1,0 +1,159 @@
+//_header.scss
+
+body {
+	background-color: #ededed;
+}
+.main-header {
+	background-color: $midnight;
+	//background-color: transparentize(darken($purple,15%), 0);
+	padding: 0.5rem 0;
+
+	// @media #{$medium-up} { // added for new nav
+ //        //margin-bottom: 5em; // if position relative
+ //        position: fixed !important; //position relative if not using scroll nav
+ //        top: 0;
+ //        width: 100%;
+ //        transition: top 200ms ease-in-out;
+ //        margin-bottom: 65px;
+ //        z-index: 100;
+ //        &.nav-up { // only for scroll nav
+ //            top: -65px;
+ //        }
+ //    } // mq
+
+	.site-title {
+		vertical-align: middle;
+		h1 {
+			font-size: 1rem;
+			text-align: center;
+			margin: 0;
+			padding: 0.75rem 0;
+			@media #{$large-up} {
+				text-align: left;
+			}
+			svg {
+				fill:#fff;
+				max-height: 15px;
+			}
+		}
+	}
+	nav {
+		a {
+			color: darken($accent, 10%);
+			font-size: 0.9rem;
+			text-transform: uppercase;
+			transition: color 200ms ease-in-out;
+			&:hover {
+				color: $accent;
+			}
+		}
+		li {
+			position: relative;
+			&:before {
+				content: '';
+			    position: absolute;
+			    left: 11%;
+			    width: 76%;
+			    background-color: transparent;
+			    height: 1px;
+			    bottom: 0.5rem;
+			    transition:$anime;
+			}
+			&:hover {
+				&:before {
+					background-color: lighten($midnight, 10%);
+					height: 2px;
+				}
+			}
+			@media #{$large-up} {
+				margin: 0 0.5em !important;
+			}
+			&.active {
+				&:before {
+					// content: '';
+				    // position: absolute;
+				    // left: 13%;
+				    // width: 76%;
+				    background-color: rgba(100, 149, 237, 0.5);
+				    // height: 1px;
+				    // bottom: 0.5rem;
+				    // transition:$anime;
+				}
+				&:hover {
+					&:before {
+						background-color: $primary;
+						height: 2px;
+					}
+				}
+			}
+		}
+	}
+	.social {
+		text-align: center;
+		li {
+			//width: 33.3333%;
+			float: none;
+			display: inline-block;
+			text-align: center;
+			margin: 0 5px;
+			a {
+				padding: 0.75rem 0.5rem;
+			}
+			// .share {
+			// 	cursor: default;
+			// 	color: $warm;
+			// 	&:hover {
+			// 		color: $warm;
+			// 	}
+			// }
+		}
+		&.is-icons {
+			a {
+				color: $royal;
+			}
+		}
+	}
+	.article & {
+		//margin-bottom: -65px;
+		position: relative;
+		z-index: 100;
+	}
+	// & + .banner { // added for new nav
+	// 	margin-top: 65px;
+	// }
+}
+
+.banner {
+	background: $pink;
+	color: #fff;
+	padding: 4rem 0;
+	@media #{$medium-up} {
+		background: -moz-linear-gradient(-45deg,  rgba(100,149,237,.85) 0%, rgba(65,127,234,.85) 100%);
+		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(100,149,237,1)), color-stop(100%,rgba(65,127,234,1)));
+		background: -webkit-linear-gradient(-45deg,  rgba(100,149,237,.85) 0%,rgba(65,127,234,.85) 100%);
+		background: linear-gradient(135deg,  transparentize($pink, 0.1) 0%,transparentize($pink, 0.2) 100%), url(img/Movement-Detroit.jpg) no-repeat;
+
+		background-size: cover !important;
+		background-position: 50% 75% !important;
+	}
+	.page & {
+		background: $primary-color;
+		@media #{$medium-up} {
+			background: -webkit-linear-gradient(-45deg,  rgba(100,149,237,.85) 0%,rgba(65,127,234,.85) 100%);
+			background: linear-gradient(135deg,  transparentize($primary-color, 0.1) 0%,transparentize($primary-color, 0.2) 100%), url(img/Movement-Detroit.jpg) no-repeat;
+		}
+	}
+	h1 {
+		color: #fff;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	h3 {
+		color:#fff;
+		font-size:1rem;
+		//font-weight: 300;
+		text-transform:uppercase;
+		letter-spacing: 2px;
+	}
+	margin-bottom: 3em;
+}

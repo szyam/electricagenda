@@ -1,0 +1,22 @@
+{
+  "name": "electricagenda",
+  "version": "1.0.0",
+  "description": "local version of ElectricAgenda site.",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-mamp": "^0.0.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "author": "Mark Szymanski",
+  "license": "ISC"
+}

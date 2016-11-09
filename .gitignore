@@ -1,0 +1,6 @@
+node_modules/*
+bower_components/*
+config.php
+send_form_email.php
+.htaccess
+.sass-cache/*

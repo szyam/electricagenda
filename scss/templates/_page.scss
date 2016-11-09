@@ -1,0 +1,15 @@
+//_page.scss
+
+.page {
+
+	h2 {
+		@media #{$medium-up} {
+			font-size: 1.75rem;
+		}
+	}
+}
+
+#searchLoop .mix {
+    display: none;
+    width:100%;
+}

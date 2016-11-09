@@ -1,0 +1,70 @@
+{
+	"artists": [
+		{
+		"artist_name": "Steph Copeland",
+		"first_name": "Steph",
+		"last_name": "Copeland",
+		"email": "name@email.com",
+		"country": "Canada",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+    },
+		{
+		"artist_name": "Jazzanova",
+		"first_name": "",
+		"last_name": "",
+		"email": "name@email.com",
+		"country": "Germany",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+		},
+		{
+		"artist_name": "Four Tet",
+		"first_name": "",
+		"last_name": "",
+		"email": "name@email.com",
+		"country": "UK",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+		},
+		{
+		"artist_name": "Cosmic Handshakes",
+		"first_name": "",
+		"last_name": "",
+		"email": "name@email.com",
+		"country": "US",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+		},
+		{
+		"artist_name": "Dial 81",
+		"first_name": "Blair",
+		"last_name": "French",
+		"email": "name@email.com",
+		"country": "US",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+		},
+		{
+		"artist_name": "Chrome Sparks",
+		"first_name": "",
+		"last_name": "",
+		"email": "name@email.com",
+		"country": "US",
+		"website": "#",
+		"soundcloud": "#",
+		"bandcamp": "#",
+		"twitter": "#"
+		}
+	]
+}
