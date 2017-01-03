@@ -9,7 +9,52 @@
 	}
 }
 
+body.search {
+	background-color: $midnight;
+
+	.filter-controls, .sort-controls {
+		h5 {
+			color: $accent;
+			text-shadow:none;
+		}
+	}
+}
+
 #searchLoop .mix {
     display: none;
-    width:100%;
+    width: 48%;
+    float: left;
+    padding: 1rem;
+    // border: 1px solid $accent;
+    margin: 1%;
+    min-height: 250px;
+    background-color: $m-dark;
+    color: #fff;
+}
+
+.search-loop {
+	li {
+		h3 {
+			color: $accent;
+		}
+		p {
+			margin-bottom: 1rem;
+			color: $list;
+		}
+		a {
+			border:1px solid $primary;
+			color: $primary;
+			display: inline-block;
+			padding: 0.375rem;
+			line-height: 1.2;
+			font-size: 0.85rem;
+			font-weight: 300;
+			transition: $anime;
+			&:hover {
+				background-color: $primary;
+				border-color: transparentize($primary, 0.1);
+				color: #fff;
+			}
+		}
+	}
 }

@@ -1,4 +1,19 @@
 //_articles.scss
+.article {
+	.mobile-feat-img {
+		margin: 0 !important;
+		text-align: center;
+		@media #{$medium-up} {
+			display: none !important;
+		}
+	}
+
+	.entry-content {
+		iframe:first-child {
+			margin-bottom: 3rem;
+		}
+	}
+}
 
 .article-header {
 	@media #{$medium-up} {
@@ -23,11 +38,13 @@
 		}
 	.header-container {
 		background-color:$primary-color;
-		padding: 1em 2em;
+		padding: 1em 3em;
 		overflow: hidden; // added for weird mobile issue
 		@media #{$medium-up} {
 			background-color:transparentize($jet, 0.75);
 			min-height: 100vh;
+			display: flex;
+			align-items: center;
 			.scroll-down {
 				position: absolute;
 				bottom:20px;
@@ -49,14 +66,14 @@
 			background-color: transparent !important;
 		}
 		@media #{$medium-up} {
-    		position: absolute;
+    		// position: absolute;
     		display: block;
     		background-color: transparentize($primary-color, .1);
     		padding: 1em 1.5em;
-    		top: 50%;
-    		right: 5%;
+    		// top: 50%;
+    		// right: 5%;
     		max-width: 40%;
-    		margin-top: -90px;
+    		// margin-top: -90px;
     	}
     	color: #fff;
     	&.title-left {
@@ -95,30 +112,31 @@ ul.interview {
 	// background-color: $primary;
 	li {
 		// font-style: italic;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		position: relative;
 		// color:$charcoal;
 		// color: #fff;
 		span:first-child {
 			content: 'EA';
-			display: block;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background-color: $midnight;
-			color: #fff;
-			text-align: center;
-			line-height: 50px;
-			margin: 2em auto 0.5em;
+		    display: block;
+		    margin: 0.5rem 0.5rem 0 0;
+		    float: left;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 50%;
+		    background-color: #383E4C;
+		    font-size: 0.9rem;
+		    color: #fff;
+		    text-align: center;
+		    line-height: 40px;
+		    opacity: 0.3;
+		    transition: all 200ms ease-in-out;
 			@media #{$medium-up} {
-				// position: absolute;
-				// left: -25px;
-				// top: 50%;
-				margin-bottom: -25px;
-				opacity: 0.15;
-				transform: translateY(0);
-				transition: $anime;
-				z-index: -1;
+				// margin-bottom: -25px;
+				// opacity: 0.15;
+				// transform: translateY(0);
+				// transition: $anime;
+				// z-index: -1;
 			}
 		}
 		&:hover {
@@ -126,18 +144,36 @@ ul.interview {
 				@media #{$medium-up} {
 					// left: -40px;
 					opacity: 0.9;
-					transform: translateY(-25px);
+					transform: translateY(-5px);
 				}
 			}
 		}
+		&:nth-of-type(odd) {
+    		font-weight: 600;
+    		color: #3c3c3c;
+		}
 	}
+}
+
+.introduction {
+    color: #777;
+    color: rgba(56,62,76,0.4);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid rgba(56,62,76,0.2);
+    display: inline-block;
+    clear: both;
+    margin-bottom: 2em;
+    letter-spacing: 1px;
 }
 
 $adWidth: 500px;
 
 .sponsorship {
-	padding: 3em 0;
+	margin-top: 1rem;
+	padding: 2rem 0 0;
 	text-align: center;
+	border-top: 3px solid #ddd;
 	h6 {
 		max-width: $adWidth;
 		margin: 0 auto;
@@ -154,6 +190,7 @@ $adWidth: 500px;
 	}
 	figure {
 		display: inline-block;
+		background-color: #ddd;
 		max-width: $adWidth;// width of ad
 		margin: 0 auto;
 		opacity: 0.9;

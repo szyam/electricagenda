@@ -60,3 +60,10 @@ $artists = array();
         "Pontchartrain"     =>  "https://soundcloud.com/pontchartrain",
         "Stone Owl"         => "https://soundcloud.com/StoneOwl"
     );
+
+    $artists["Alex Frankel"] = array(
+        "name"         =>  "Alex Frankel",
+        "soundcloud"   =>  "https://soundcloud.com/frankelgoestohollywood",
+        "twitter"      =>  "https://twitter.com/realalexfrankel",
+        "facebook"     =>  "https://www.facebook.com/Frankelgoestohollywood/"
+    );

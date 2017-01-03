@@ -43,3 +43,11 @@ $articles = array();
         "artist_name"   =>  "Movement Artists",
         "author"        =>  "Hector Pearl"
     );
+
+    $articles[6] = array(
+        "title"         =>  "Alex Frankel creates a Negative Space",
+        "subtitle"      =>  "I'm more of a hardware guy traditionally and vintage synth nerd but I guess I'm letting go of that recently and I just try to use whatever is available at the exact moment I want to make music.",
+        "post_date"     =>  "2016-12-20",
+        "artist_name"   =>  "Alex Frankel",
+        "author"        =>  "Mark Szymanski"
+    );

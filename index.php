@@ -37,6 +37,7 @@ include('inc/header.php'); ?>
 
     <div class="row">
         <div class="small-12 columns">
+        
            <ul class="articles-loop">
 
         <?php
@@ -95,46 +96,42 @@ include('inc/header.php'); ?>
 
 <section class="home-main-content">
     <div class="row">
-        <div class="small-12 columns"><!--
-            <ul class="inline-list filter-controls">
-                <li><h5>Filter By:</h5></li>
-                <li><h5 class="filter" data-filter="all">All</h5></li>
-                <li><h5 class="filter" data-filter=".US">US</h5></li>
-                <li><h5 class="filter" data-filter=".Europe">European</h5></li>
-            </ul> -->
+        <div class="small-12 columns">
 
-            <ul class="inline-list sort-controls">
-                <li><h5>Sort By:</h5></li>
-                <li><h5 class="sort" data-sort="name:asc">Name</h5></li>
-                <li><h5 class="sort" data-sort="date:asc">Date</h5></li>
-            </ul>
+        <?php include('data/festival/festival-array.php'); ?>
+        <?php if( array_key_exists('end_date', $festivals)): ?>
+            <?php if ( strtotime($festival['end_date']) >= time() ) { ?>
 
-            <?php include('data/festival/festival-array.php'); ?>
+                <ul class="inline-list sort-controls">
+                    <li><h5>Sort By:</h5></li>
+                    <li><h5 class="sort" data-sort="name:asc">Name</h5></li>
+                    <li><h5 class="sort" data-sort="date:asc">Date</h5></li>
+                </ul>
 
-            <ul id="festival-container" class="festival-grid">
+                <ul id="festival-container" class="festival-grid">
 
-                <?php foreach ( $festivals as $festival ) { ?>
-                <?php
-                    $name    = preg_replace("/[^a-zA-Z]/", "", $festival['name']);
-                    $str     = strtolower($name);
-                ?>
+                    <?php foreach ( $festivals as $festival ) { ?>
+                    <?php
+                        $name    = preg_replace("/[^a-zA-Z]/", "", $festival['name']);
+                        $str     = strtolower($name);
+                    ?>
 
-                <?php if ( strtotime($festival['end_date']) >= time() ) { ?>
-                    <li class="mix <?php echo $festival['origin']; ?>" data-name="<?php echo $festival['name']; ?>" data-date="<?php echo $festival['start_date']; ?>">
-                        <a href="festivals/<?php echo yearly($festival['start_date']); ?>/<?php echo $str; ?>" <?php if ( !$festival["live"] ) {  echo 'class="false"'; } ?>>
-                            <h2 class="title"><?php echo $festival["name"]; ?></h2>
-                            <h4 class="date"><?php echo datey($festival['start_date']); ?></h4>
-                            <!-- <img src="<?php echo $festival['img']; ?>" /> -->
-                        </a>
-                        <div class="img-cont" style="background:url('img/thumbs/<?php echo $str; ?>.jpg')"></div>
-                    </li>
-                    <?php } ?>
-                <?php } ?>
-            </ul>
+                        <li class="mix <?php echo $festival['origin']; ?>" data-name="<?php echo $festival['name']; ?>" data-date="<?php echo $festival['start_date']; ?>">
+                            <a href="festivals/<?php echo yearly($festival['start_date']); ?>/<?php echo $str; ?>" <?php if ( !$festival["live"] ) {  echo 'class="false"'; } ?>>
+                                <h2 class="title"><?php echo $festival["name"]; ?></h2>
+                                <h4 class="date"><?php echo datey($festival['start_date']); ?></h4>
+                                <!-- <img src="<?php echo $festival['img']; ?>" /> -->
+                            </a>
+                            <div class="img-cont" style="background:url('img/thumbs/<?php echo $str; ?>.jpg')"></div>
+                        </li>
+                    <?php } // end foreach ?>
+                </ul>
+            <?php } ?>
+        <?php endif; ?>
         </div>
 
         <div class="small-12 columns expired">
-            <h5>Previous Festivals</h5>
+            <h5>Previous Festivals / <em><small>Festival Updates Coming Soon</small></em></h5>
             <ul class="inline-list">
 
                 <?php foreach ( $festivals as $festival ) { ?>

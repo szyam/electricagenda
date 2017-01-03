@@ -47,7 +47,11 @@
 		<?php endif; ?>
 
 	} //end if
+	<?php endif; ?>
 
+	<?php if( isset($soundcloudID) && ( $soundcloudID !== null ) && ( $featureTitle === null ) ): ?>
+		var $soundcloudID = '<?php echo $soundcloudID; ?>';
+		$('<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'+$soundcloudID+'&amp;color=7e5ae2&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>').prependTo('.entry-content');
 	<?php endif; ?>
 
 	}); //ready

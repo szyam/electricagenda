@@ -16,7 +16,7 @@
 			transition: background 200ms linear;
 			-webkit-backface-visibility: hidden; 
 			z-index: -1;
-  			filter: grayscale(1);
+  			// filter: grayscale(1);
 		}
 	}
 	figure {
@@ -27,13 +27,18 @@
 	}
 	.feat-article-container {
 		background-color:$primary-color;
-		padding: 3.5em 0;
+		// padding: 3.5em 0;
 		@media #{$medium-up} {
-			background-color:transparentize($primary-color, 0.7);
-			padding: 8em 0;
-			min-height: 50vh;
+			background-color:transparentize($primary-color,1);
+			// padding: 8em 0;
+			min-height: 70vh;
+			display: flex;
+			align-items: center;
 			transition: background 300ms linear;
 		}
+		// @media #{$large-up} {
+		// 	min-height: 75vh;
+		// }
 		.feat-copy {
 			// float: right;
 			max-width: 500px;

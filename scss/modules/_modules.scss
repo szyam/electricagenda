@@ -201,7 +201,7 @@ figcaption {
 	.sharing-container {
 		position: fixed;
 		top: 50%;
-		right: -79px;
+		right: -85px;
 		width: 100px;
 		background-color: rgba(255,255,255,0);
 		color: #fff;
@@ -209,21 +209,21 @@ figcaption {
 		transition: $anime;
 		h6 {
 			color: #fff;
-			font-size: 0.75rem;
+			font-size: 1rem;
 			margin:0;
 			background-color: $royal;
 			// border:5px solid $royal;
-			font-weight: bold;
+			// font-weight: bold;
 			line-height: 1;
 			cursor: pointer;
 			position: absolute;
 			text-align: center;
 			padding: 0.25rem 1rem;
-			width:107%;
+			width:108%;
 			right: 0;
 			left: 0;
 			text-transform: uppercase;
-			transform:rotate(-90deg) translateX(-41%) translateY(-220%);
+			transform:rotate(-90deg) translateX(-39%) translateY(-220%);
 			-webkit-filter: blur(0);
 		}
 		.sharing-module {
@@ -285,6 +285,11 @@ figcaption {
 			width: 31.3333%;
 		}
 	}
+}
+
+.bg-img {
+	background-size: cover;
+	background-repeat: none;
 }
 
 .zoom img {
