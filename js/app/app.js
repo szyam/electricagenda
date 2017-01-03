@@ -53,6 +53,11 @@ $(document).ready( function() {
   //   // * End scroll nav
   // });
 
+  $(window).on("scroll",function(){
+    $("#share").fadeIn()});
+    $("#mobileShare").on("click",function(){$(this).closest(".sharing-container").toggleClass("active");
+  });
+
     if ( $('body').hasClass('home') || $('body').hasClass('festivals')) {
     	$(function(){
     	    $('#festival-container').mixItUp();
